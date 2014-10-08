@@ -1,6 +1,7 @@
 #include <iostream>
 #include <matrix.h>
 
+
 using namespace std;
 
 
@@ -28,6 +29,9 @@ int main()
    cout<<"La Multiplicacion de a*b es"<<endl;
    c = a*b;
    c.showMatrix();
+
+   cout<<"Sobrecarga de c"<<endl;
+   cout<< c;
 
 
 

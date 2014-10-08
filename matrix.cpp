@@ -322,3 +322,21 @@ Matrix Matrix::operator*(const Matrix x)
        }
     return z;
 }
+
+ostream& operator << (ostream &os, const Matrix &m)
+{
+    int i = 0;
+    int j = 0;
+
+    for(i = 0;i<m.filas;i++)
+    {
+        for(j=0;j<m.columnas;j++)
+        {
+            os << m.matriz[i][j] << " ";
+        }
+
+        os << endl;
+    }
+
+    return os;
+}

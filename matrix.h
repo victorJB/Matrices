@@ -3,6 +3,10 @@
 
 #include <iostream>
 
+using namespace std;
+
+
+
 class Matrix
 {
 private:
@@ -29,7 +33,7 @@ public:
     void showMatrix();
     Matrix operator-(const Matrix x);
     Matrix operator*(const Matrix x);
-
+    friend ostream& operator << (ostream& os, const Matrix &m);
 
 
 };
