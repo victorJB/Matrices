@@ -9,26 +9,23 @@ using namespace std;
 int main()
 {
 
-   Matrix a ;
+   Matrix a;
    Matrix b;
+   Matrix c;
 
-   a.cargarDatos("C://MatrizA.txt");
-   b.cargarDatos("C://MatrizB.txt");
+   a.cargarDatos("MatrizA.txt");
+   b.cargarDatos("MatrizB.txt");
 
   cout<<a<<endl;
   cout<<b<<endl;
 
-  a.exportarDatos("C://NuevaMatrizA.txt");
-  b.exportarDatos("C://NuevaMatrizB.txt");
+  a.exportarDatos("NuevaMatrizA.txt");
+  b.exportarDatos("NuevaMatrizB.txt");
 
-
-
-
-
-
-
-
-
+  c = a+b;
+  cout<<"Sobrecarga del operador + y exportar datos"<<endl;
+  cout<<c<<endl;
+  c.exportarDatos("NuevaMatrizC.txt");
 
 
     return 0;
