@@ -1,5 +1,6 @@
 #include <iostream>
 #include <matrix.h>
+#include <fstream>
 
 using namespace std;
 
@@ -339,4 +340,69 @@ ostream& operator << (ostream &os, const Matrix &m)
     }
 
     return os;
+}
+
+void Matrix::cargarDatos(string A)
+{
+    int i = 0;
+    int j = 0;
+    ifstream file;
+    file.open(A.c_str());
+    if(file.is_open())
+    {
+        file >> this->filas;
+              file >> this->columnas;
+
+              this->matriz = new double* [filas];
+
+              for(i=0;i<this->filas;i++)
+              {
+                  this->matriz[i]= new double [columnas];
+              }
+
+              for(i = 0;i<this->filas;i++)
+              {
+                  for(j = 0;j<this->columnas;j++)
+                  {
+                      file >> this->matriz[i][j];
+
+                  }
+              }
+
+     file.close();
+
+    }
+
+}
+
+
+void Matrix::exportarDatos(string A)
+{
+    int i = 0;
+    int j = 0;
+    ofstream file;
+    file.open(A.c_str());
+    if(file.is_open())
+    {
+        file << this->filas << " "<< this->columnas<<endl;
+
+
+              for(i = 0;i<this->filas;i++)
+              {
+                  for(j = 0;j<this->columnas;j++)
+                  {
+                      file << this->matriz[i][j] << " ";
+
+                  }
+
+                  file << endl;
+              }
+
+      file.close();
+
+
+
+
+    }
+
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <matrix.h>
+#include <fstream>
 
 
 using namespace std;
@@ -8,30 +9,22 @@ using namespace std;
 int main()
 {
 
-   Matrix a =  Matrix(3,3);
-   Matrix b = Matrix(3,3);
-   Matrix c = Matrix(3,3);
+   Matrix a ;
+   Matrix b;
 
-   a.setMatrix();
-   a.getMatrix();
+   a.cargarDatos("C://MatrizA.txt");
+   b.cargarDatos("C://MatrizB.txt");
 
-   b.setMatrix();
-   b.getMatrix();
+  cout<<a<<endl;
+  cout<<b<<endl;
 
-   cout<<"La suma de a+b es"<<endl;
-   c = a+b;
-   c.showMatrix();
+  a.exportarDatos("C://NuevaMatrizA.txt");
+  b.exportarDatos("C://NuevaMatrizB.txt");
 
-   cout<<"La resta de a-b es"<<endl;
-   c = a-b;
-   c.showMatrix();
 
-   cout<<"La Multiplicacion de a*b es"<<endl;
-   c = a*b;
-   c.showMatrix();
 
-   cout<<"Sobrecarga de c"<<endl;
-   cout<< c;
+
+
 
 
 

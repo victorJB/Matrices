@@ -2,6 +2,7 @@
 #define MATRIX_H
 
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -34,6 +35,8 @@ public:
     Matrix operator-(const Matrix x);
     Matrix operator*(const Matrix x);
     friend ostream& operator << (ostream& os, const Matrix &m);
+    void cargarDatos(string A);
+    void exportarDatos(string A);
 
 
 };
