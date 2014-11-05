@@ -3,8 +3,7 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp \
-    matrix.cpp
+SOURCES += main.cpp
 
 HEADERS += \
     matrix.h
