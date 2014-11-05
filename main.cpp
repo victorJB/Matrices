@@ -9,9 +9,9 @@ using namespace std;
 int main()
 {
 
-   Matrix a;
-   Matrix b;
-   Matrix c;
+   Matrix <int> a;
+   Matrix <int> b;
+   Matrix <int> c;
 
    a.cargarDatos("MatrizA.txt");
    b.cargarDatos("MatrizB.txt");
